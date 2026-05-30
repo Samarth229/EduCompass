@@ -139,6 +139,7 @@ function ReviewCard({
       setReplyText('')
       setShowReply(false)
       toast.success('Reply posted!')
+      window.location.reload()
     } catch {
       toast.error('Failed to post reply')
     } finally {
