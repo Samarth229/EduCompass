@@ -7,8 +7,7 @@ import type { CollegeListItem } from '@/lib/api'
 
 async function fetchTopColleges(): Promise<CollegeListItem[]> {
   try {
-    const base = process.env.NEXTAUTH_URL ?? 'http://localhost:3000'
-    const res = await fetch(`${base}/api/colleges?limit=6&sortBy=nirfRank&sortOrder=asc`, {
+    const res = await fetch(`https://edu-compass-three.vercel.app/api/colleges?limit=6&sortBy=nirfRank&sortOrder=asc`, {
       cache: 'no-store',
     })
     if (!res.ok) return []
